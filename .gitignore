@@ -4,6 +4,7 @@ Makefile*
 *.pro.user
 *.cache
 Makefile*
+Linux/cmake-build*
 !Linux/RTIMULibDrive/Makefile
 !Linux/RTIMULibDrive10/Makefile
 !Linux/RTIMULibDrive11/Makefile
