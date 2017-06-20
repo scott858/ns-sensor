@@ -32,15 +32,39 @@
 RTIMULSM9DS1::RTIMULSM9DS1(RTIMUSettings *settings) : RTIMU(settings)
 {
     m_sampleRate = 100;
+
+    m_pinStart = '0';
+    m_pinEnd= '1';
 }
 
 RTIMULSM9DS1::~RTIMULSM9DS1()
 {
+    if(m_magChipSelect)
+    {
+        close(m_magChipSelect);
+    }
+    if(m_gyroChipSelect)
+    {
+        close(m_gyroChipSelect);
+    }
 }
 
 bool RTIMULSM9DS1::IMUInit()
 {
     unsigned char result;
+
+    int direction_handle = open(LSM9DS1_GYRO_CS_DIRECTION, O_RDWR);
+    write(direction_handle, "high", 5);
+    close(direction_handle);
+
+    direction_handle = open(LSM9DS1_MAG_CS_DIRECTION, O_RDWR);
+    write(direction_handle, "high", 5);
+    close(direction_handle);
+
+
+
+    m_gyroChipSelect = open(LSM9DS1_GRYO_CS_VALUE, O_RDWR);
+    m_magChipSelect = open(LSM9DS1_MAG_CS_VALUE, O_RDWR);
 
     // set validity flags
 
@@ -57,26 +81,6 @@ bool RTIMULSM9DS1::IMUInit()
 
     m_accelGyroSlaveAddr = m_settings->m_I2CSlaveAddress;
 
-    // work outmag address
-
-    if (m_settings->HALRead(LSM9DS1_MAG_ADDRESS0, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
-        if (result == LSM9DS1_MAG_ID) {
-            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS0;
-        }
-    } else if (m_settings->HALRead(LSM9DS1_MAG_ADDRESS1, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
-        if (result == LSM9DS1_MAG_ID) {
-            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS1;
-        }
-    } else if (m_settings->HALRead(LSM9DS1_MAG_ADDRESS2, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
-        if (result == LSM9DS1_MAG_ID) {
-            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS2;
-        }
-    } else if (m_settings->HALRead(LSM9DS1_MAG_ADDRESS3, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
-        if (result == LSM9DS1_MAG_ID) {
-            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS3;
-        }
-    }
-
     setCalibrationData();
 
     //  enable the I2C bus
@@ -84,14 +88,34 @@ bool RTIMULSM9DS1::IMUInit()
     if (!m_settings->HALOpen())
         return false;
 
+    // work outmag address
+
+    if (HALReadMag(LSM9DS1_MAG_ADDRESS0, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
+        if (result == LSM9DS1_MAG_ID) {
+            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS0;
+        }
+    } else if (HALReadMag(LSM9DS1_MAG_ADDRESS1, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
+        if (result == LSM9DS1_MAG_ID) {
+            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS1;
+        }
+    } else if (HALReadMag(LSM9DS1_MAG_ADDRESS2, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
+        if (result == LSM9DS1_MAG_ID) {
+            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS2;
+        }
+    } else if (HALReadMag(LSM9DS1_MAG_ADDRESS3, LSM9DS1_MAG_WHO_AM_I, 1, &result, "")) {
+        if (result == LSM9DS1_MAG_ID) {
+            m_magSlaveAddr = LSM9DS1_MAG_ADDRESS3;
+        }
+    }
+
     //  Set up the gyro/accel
 
-    if (!m_settings->HALWrite(m_accelGyroSlaveAddr, LSM9DS1_CTRL8, 0x80, "Failed to boot LSM9DS1"))
+    if (!HALWriteGyro(m_accelGyroSlaveAddr, LSM9DS1_CTRL8, 0x80, "Failed to boot LSM9DS1"))
         return false;
 
     m_settings->delayMs(100);
 
-    if (!m_settings->HALRead(m_accelGyroSlaveAddr, LSM9DS1_WHO_AM_I, 1, &result, "Failed to read LSM9DS1 accel/gyro id"))
+    if (!HALReadGyro(m_accelGyroSlaveAddr, LSM9DS1_WHO_AM_I, 1, &result, "Failed to read LSM9DS1 accel/gyro id"))
         return false;
 
     if (result != LSM9DS1_ID) {
@@ -107,7 +131,7 @@ bool RTIMULSM9DS1::IMUInit()
 
     //  Set up the mag
 
-    if (!m_settings->HALRead(m_magSlaveAddr, LSM9DS1_MAG_WHO_AM_I, 1, &result, "Failed to read LSM9DS1 accel/mag id"))
+    if (!HALReadMag(m_magSlaveAddr, LSM9DS1_MAG_WHO_AM_I, 1, &result, "Failed to read LSM9DS1 accel/mag id"))
         return false;
 
     if (result != LSM9DS1_MAG_ID) {
@@ -134,6 +158,42 @@ bool RTIMULSM9DS1::IMUInit()
 
     HAL_INFO("LSM9DS1 init complete\n");
     return true;
+}
+
+bool RTIMULSM9DS1::HALWriteGyro(unsigned char slaveAddr, unsigned char regAddr,
+                        unsigned char const data, const char *errorMsg)
+{
+    write(m_gyroChipSelect, &m_pinStart, 1);
+    bool retval = m_settings->HALWrite(slaveAddr, regAddr, data, errorMsg);
+    write(m_gyroChipSelect, &m_pinEnd, 1);
+    return retval;
+}
+
+bool RTIMULSM9DS1::HALReadGyro(unsigned char slaveAddr, unsigned char regAddr, unsigned char length,
+                               unsigned char *data, const char *errorMsg)
+{
+    write(m_gyroChipSelect, &m_pinStart, 1);
+    bool retval = m_settings->HALRead(slaveAddr, regAddr, length, data, errorMsg);
+    write(m_gyroChipSelect, &m_pinEnd, 1);
+    return retval;
+}
+
+bool RTIMULSM9DS1::HALWriteMag(unsigned char slaveAddr, unsigned char regAddr,
+                        unsigned char const data, const char *errorMsg)
+{
+    write(m_magChipSelect, &m_pinStart, 1);
+    bool retval = m_settings->HALWrite(slaveAddr, regAddr, data, errorMsg);
+    write(m_magChipSelect, &m_pinEnd, 1);
+    return retval;
+}
+
+bool RTIMULSM9DS1::HALReadMag(unsigned char slaveAddr, unsigned char regAddr, unsigned char length,
+                              unsigned char *data, const char *errorMsg)
+{
+    write(m_magChipSelect, &m_pinStart, 1);
+    bool retval = m_settings->HALRead(slaveAddr, regAddr, length, data, errorMsg);
+    write(m_magChipSelect, &m_pinEnd, 1);
+    return retval;
 }
 
 bool RTIMULSM9DS1::setGyroSampleRate()
@@ -216,7 +276,7 @@ bool RTIMULSM9DS1::setGyroSampleRate()
         HAL_ERROR1("Illegal LSM9DS1 gyro FSR code %d\n", m_settings->m_LSM9DS1GyroFsr);
         return false;
     }
-    return (m_settings->HALWrite(m_accelGyroSlaveAddr, LSM9DS1_CTRL1, ctrl1, "Failed to set LSM9DS1 gyro CTRL1"));
+    return (HALWriteGyro(m_accelGyroSlaveAddr, LSM9DS1_CTRL1, ctrl1, "Failed to set LSM9DS1 gyro CTRL1"));
 }
 
 bool RTIMULSM9DS1::setGyroCTRL3()
@@ -232,7 +292,7 @@ bool RTIMULSM9DS1::setGyroCTRL3()
     //  Turn on hpf
     ctrl3 |= 0x40;
 
-    return m_settings->HALWrite(m_accelGyroSlaveAddr,  LSM9DS1_CTRL3, ctrl3, "Failed to set LSM9DS1 gyro CTRL3");
+    return HALWriteGyro(m_accelGyroSlaveAddr,  LSM9DS1_CTRL3, ctrl3, "Failed to set LSM9DS1 gyro CTRL3");
 }
 
 bool RTIMULSM9DS1::setAccelCTRL6()
@@ -275,7 +335,7 @@ bool RTIMULSM9DS1::setAccelCTRL6()
 
     ctrl6 |= (m_settings->m_LSM9DS1AccelLpf) | (m_settings->m_LSM9DS1AccelFsr << 3);
 
-    return m_settings->HALWrite(m_accelGyroSlaveAddr,  LSM9DS1_CTRL6, ctrl6, "Failed to set LSM9DS1 accel CTRL6");
+    return HALWriteGyro(m_accelGyroSlaveAddr,  LSM9DS1_CTRL6, ctrl6, "Failed to set LSM9DS1 accel CTRL6");
 }
 
 bool RTIMULSM9DS1::setAccelCTRL7()
@@ -286,7 +346,7 @@ bool RTIMULSM9DS1::setAccelCTRL7()
     //Bug: Bad things happen.
     //ctrl7 = 0x05;
 
-    return m_settings->HALWrite(m_accelGyroSlaveAddr,  LSM9DS1_CTRL7, ctrl7, "Failed to set LSM9DS1 accel CTRL7");
+    return HALWriteGyro(m_accelGyroSlaveAddr,  LSM9DS1_CTRL7, ctrl7, "Failed to set LSM9DS1 accel CTRL7");
 }
 
 
@@ -301,7 +361,7 @@ bool RTIMULSM9DS1::setCompassCTRL1()
 
     ctrl1 = (m_settings->m_LSM9DS1CompassSampleRate << 2);
 
-    return m_settings->HALWrite(m_magSlaveAddr, LSM9DS1_MAG_CTRL1, ctrl1, "Failed to set LSM9DS1 compass CTRL5");
+    return HALWriteMag(m_magSlaveAddr, LSM9DS1_MAG_CTRL1, ctrl1, "Failed to set LSM9DS1 compass CTRL5");
 }
 
 bool RTIMULSM9DS1::setCompassCTRL2()
@@ -336,12 +396,12 @@ bool RTIMULSM9DS1::setCompassCTRL2()
         return false;
     }
 
-    return m_settings->HALWrite(m_magSlaveAddr, LSM9DS1_MAG_CTRL2, ctrl2, "Failed to set LSM9DS1 compass CTRL6");
+    return HALWriteMag(m_magSlaveAddr, LSM9DS1_MAG_CTRL2, ctrl2, "Failed to set LSM9DS1 compass CTRL6");
 }
 
 bool RTIMULSM9DS1::setCompassCTRL3()
 {
-     return m_settings->HALWrite(m_magSlaveAddr,  LSM9DS1_MAG_CTRL3, 0x00, "Failed to set LSM9DS1 compass CTRL3");
+     return HALWriteMag(m_magSlaveAddr,  LSM9DS1_MAG_CTRL3, 0x00, "Failed to set LSM9DS1 compass CTRL3");
 }
 
 int RTIMULSM9DS1::IMUGetPollInterval()
@@ -356,20 +416,20 @@ bool RTIMULSM9DS1::IMURead()
     unsigned char accelData[6];
     unsigned char compassData[6];
 
-    if (!m_settings->HALRead(m_accelGyroSlaveAddr, LSM9DS1_STATUS, 1, &status, "Failed to read LSM9DS1 status"))
+    if (!HALReadGyro(m_accelGyroSlaveAddr, LSM9DS1_STATUS, 1, &status, "Failed to read LSM9DS1 status"))
         return false;
 
     if ((status & 0x3) == 0)
         return false;
 
     for (int i = 0; i<6; i++){
-        if (!m_settings->HALRead(m_accelGyroSlaveAddr, LSM9DS1_OUT_X_L_G + i, 1, &gyroData[i], "Failed to read LSM9DS1 gyro data"))
+        if (!HALReadGyro(m_accelGyroSlaveAddr, LSM9DS1_OUT_X_L_G + i, 1, &gyroData[i], "Failed to read LSM9DS1 gyro data"))
             return false;
 
-        if (!m_settings->HALRead(m_accelGyroSlaveAddr, LSM9DS1_OUT_X_L_XL + i, 1, &accelData[i], "Failed to read LSM9DS1 accel data"))
+        if (!HALReadGyro(m_accelGyroSlaveAddr, LSM9DS1_OUT_X_L_XL + i, 1, &accelData[i], "Failed to read LSM9DS1 accel data"))
             return false;
 
-        if (!m_settings->HALRead(m_magSlaveAddr, LSM9DS1_MAG_OUT_X_L + i, 1, &compassData[i], "Failed to read LSM9DS1 compass data"))
+        if (!HALReadMag(m_magSlaveAddr, LSM9DS1_MAG_OUT_X_L + i, 1, &compassData[i], "Failed to read LSM9DS1 compass data"))
             return false;
     }
 

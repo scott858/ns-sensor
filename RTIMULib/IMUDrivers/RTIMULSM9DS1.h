@@ -51,6 +51,12 @@ typedef struct
 
 #endif
 
+#define LSM9DS1_GRYO_CS_VALUE        "/sys/class/gpio/gpio2/value"
+#define LSM9DS1_GYRO_CS_DIRECTION    "/sys/class/gpio/gpio2/direction"
+
+#define LSM9DS1_MAG_CS_VALUE        "/sys/class/gpio/gpio58/value"
+#define LSM9DS1_MAG_CS_DIRECTION    "/sys/class/gpio/gpio58/direction"
+
 class RTIMULSM9DS1 : public RTIMU
 {
 public:
@@ -71,6 +77,24 @@ private:
     bool setCompassCTRL1();
     bool setCompassCTRL2();
     bool setCompassCTRL3();
+
+    bool HALWriteGyro(unsigned char slaveAddr, unsigned char regAddr,
+                                    unsigned char const data, const char *errorMsg);
+
+    bool HALWriteMag(unsigned char slaveAddr, unsigned char regAddr,
+                                   unsigned char const data, const char *errorMsg);
+
+    bool HALReadMag(unsigned char slaveAddr, unsigned char regAddr, unsigned char length,
+                     unsigned char *data, const char *errorMsg);
+
+    bool HALReadGyro(unsigned char slaveAddr, unsigned char regAddr, unsigned char length,
+                 unsigned char *data, const char *errorMsg);
+
+    int m_magChipSelect;
+    int m_gyroChipSelect;
+
+    unsigned char m_pinStart;
+    unsigned char m_pinEnd;
 
     unsigned char m_accelGyroSlaveAddr;                     // I2C address of accel andgyro
     unsigned char m_magSlaveAddr;                           // I2C address of mag
