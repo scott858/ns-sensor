@@ -54,8 +54,8 @@ typedef struct
 #define LSM9DS1_GRYO_CS_VALUE        "/sys/class/gpio/gpio2/value"
 #define LSM9DS1_GYRO_CS_DIRECTION    "/sys/class/gpio/gpio2/direction"
 
-#define LSM9DS1_MAG_CS_VALUE        "/sys/class/gpio/gpio58/value"
-#define LSM9DS1_MAG_CS_DIRECTION    "/sys/class/gpio/gpio58/direction"
+#define LSM9DS1_MAG_CS_VALUE        "/sys/class/gpio/gpio6/value"
+#define LSM9DS1_MAG_CS_DIRECTION    "/sys/class/gpio/gpio6/direction"
 
 class RTIMULSM9DS1 : public RTIMU
 {
