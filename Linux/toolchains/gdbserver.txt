@@ -1,2 +1,3 @@
 export LD_LIBRARY_PATH=/home/root/ns-sensor/Linux/cmake-build-debug/RTIMULib/
 gdbserver host:2334 Linux/cmake-build-debug/RTIMULibDrive/RTIMULibDrive
+
