@@ -52,3 +52,5 @@ GeneratedFiles/
 *.pro.user*
 .DS_store
 octave-core
+.idea
+Linux/.idea
