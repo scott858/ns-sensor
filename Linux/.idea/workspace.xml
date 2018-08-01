@@ -23,7 +23,14 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
-    <generated />
+    <generated>
+      <config projectName="RTIMULib" targetName="RTIMULibCal" />
+      <config projectName="RTIMULib" targetName="RTIMULib" />
+      <config projectName="RTIMULib" targetName="RTIMULibDrive" />
+      <config projectName="RTIMULib" targetName="gpio_output" />
+      <config projectName="RTIMULib" targetName="RTIMULibDrive11" />
+      <config projectName="RTIMULib" targetName="RTIMULibDrive10" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -40,33 +47,66 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="RTIMULibDrive.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="175">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="306">
-                <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="RTIMUSettings.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUSettings.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19067">
+              <caret line="593" column="20" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gpio_output.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpio/gpio_output.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pathmacros.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpio/pathmacros.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding>
+                <element signature="e#323#418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getkey.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpio/getkey.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getkey.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpio/getkey.h">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="RTIMU.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
+            <state relative-caret-position="2052">
               <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="50" />
             </state>
           </provider>
@@ -75,26 +115,38 @@
       <file leaf-file-name="RTIMULSM9DS1.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2389">
+            <state relative-caret-position="7938">
               <caret line="441" selection-start-line="441" selection-end-line="441" />
+              <folding>
+                <element signature="e#0#76#0" />
+                <element signature="e#1549#1720#0" />
+                <element signature="e#6054#8021#0" />
+                <element signature="e#8023#8522#0" />
+                <element signature="e#8524#9819#0" />
+                <element signature="e#9821#10061#0" />
+                <element signature="e#10064#10537#0" />
+                <element signature="e#10539#11363#0" />
+                <element signature="e#11365#11511#0" />
+                <element signature="e#11513#11588#0" />
+                <element signature="e#11590#13260#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RTIMUHal.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RTIMUHal.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="223" selection-start-line="223" selection-end-line="223" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RTIMU.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-954">
-              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+            <state relative-caret-position="391">
+              <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#76#0" />
+                <element signature="e#3950#4011#0" />
+                <element signature="e#4013#4142#0" />
+                <element signature="e#4144#4243#0" />
+                <element signature="e#9386#9847#0" />
+                <element signature="e#9849#9926#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,9 +190,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="65" />
+    <option name="x" value="75" />
     <option name="y" value="24" />
-    <option name="width" value="1788" />
+    <option name="width" value="1248" />
     <option name="height" value="1576" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -183,6 +235,17 @@
               <item name="Linux" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Linux" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RTIMULib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Linux" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Linux" type="462c0819:PsiDirectoryNode" />
+              <item name="RTIMULibDrive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTIMULib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Linux" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="RTIMULib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -191,7 +254,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -279,6 +342,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
+      <item itemvalue="GDB Remote Debug.RTIMULibDrive" />
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.gpio_output" />
       <item itemvalue="Application.RTIMULibCal" />
@@ -286,7 +350,6 @@
       <item itemvalue="Application.RTIMULibDrive10" />
       <item itemvalue="Application.RTIMULibDrive11" />
       <item itemvalue="Application.RTIMULib" />
-      <item itemvalue="GDB Remote Debug.RTIMULibDrive" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -319,27 +382,28 @@
       <workItem from="1528307717220" duration="30000" />
       <workItem from="1528307789978" duration="1764000" />
       <workItem from="1532021014979" duration="3683000" />
+      <workItem from="1532027742317" duration="643000" />
+      <workItem from="1532034850400" duration="756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51720000" />
+    <option name="totallyTimeSpent" value="53126000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1788" height="1576" extended-state="4" />
+    <frame x="75" y="24" width="1248" height="1576" extended-state="4" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19800332" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.46855563" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3600553" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1923077" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.33448514" />
       <window_info anchor="bottom" id="TeamCity" order="8" />
       <window_info anchor="right" id="LuaJ" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32964754" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32964754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3600553" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28334486" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,11 +411,12 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32946378" />
-      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.33448514" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32964754" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.46855563" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gpio/getkey.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gpio/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -559,22 +617,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gpio/getkey.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTIMULibDrive/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-72" />
       </provider>
     </entry>
     <entry file="file:///toolchains/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/linux/spi/spidev.h" />
-    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUSettings.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="593" column="20" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTHumidityHTU21D.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
@@ -597,20 +645,6 @@
       </provider>
     </entry>
     <entry file="file:///toolchains/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/unistd.h" />
-    <entry file="file://$PROJECT_DIR$/gpio/gpio_output.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpio/pathmacros.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -641,15 +675,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
+        <state relative-caret-position="2052">
           <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2389">
+        <state relative-caret-position="7938">
           <caret line="441" selection-start-line="441" selection-end-line="441" />
+          <folding>
+            <element signature="e#0#76#0" />
+            <element signature="e#1549#1720#0" />
+            <element signature="e#6054#8021#0" />
+            <element signature="e#8023#8522#0" />
+            <element signature="e#8524#9819#0" />
+            <element signature="e#9821#10061#0" />
+            <element signature="e#10064#10537#0" />
+            <element signature="e#10539#11363#0" />
+            <element signature="e#11365#11511#0" />
+            <element signature="e#11513#11588#0" />
+            <element signature="e#11590#13260#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -660,34 +707,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="223" selection-start-line="223" selection-end-line="223" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
+        <state relative-caret-position="1602">
           <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="306">
-            <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <first_editor relative-caret-position="216">
+            <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpio/getkey.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpio/getkey.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpio/gpio_output.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpio/pathmacros.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="e#323#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUSettings.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19067">
+          <caret line="593" column="20" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#76#0" />
+            <element signature="e#3950#4011#0" />
+            <element signature="e#4013#4142#0" />
+            <element signature="e#4144#4243#0" />
+            <element signature="e#9386#9847#0" />
+            <element signature="e#9849#9926#0" />
+          </folding>
         </state>
       </provider>
     </entry>
