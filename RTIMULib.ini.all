@@ -24,7 +24,7 @@ IMUType=6
 #   0 - Null. Use if only sensor data required without fusion
 #   1 - Kalman STATE4
 #   2 - RTQF
-FusionType=0
+FusionType=2
 
 # 
 # Is bus I2C: 'true' for I2C, 'false' for SPI
@@ -61,41 +61,41 @@ AxisRotation=0
 #   3 = LPS25H
 #   4 = MS5611
 #   5 = MS5637
-PressureType=4
+PressureType=0
 
 # 
 # I2C pressure sensor address (filled in automatically by auto discover) 
-I2CPressureAddress=118
+I2CPressureAddress=0
 
 # Humidity sensor type - 
 #   0 = Auto discover
 #   1 = Null (no hardware or don't use)
 #   2 = HTS221
 #   3 = HTU21D
-HumidityType=3
+HumidityType=0
 
 # 
 # I2C humidity sensor address (filled in automatically by auto discover) 
-I2CHumidityAddress=64
+I2CHumidityAddress=0
 
 # #####################################################################
 # 
 
 # Compass calibration settings
 CompassCalValid=true
-CompassCalMinX=-133.671402
-CompassCalMinY=-18.963770
-CompassCalMinZ=-86.695351
-CompassCalMaxX=-31.422405
-CompassCalMaxY=83.795364
-CompassCalMaxZ=16.746487
+CompassCalMinX=-114.241730
+CompassCalMinY=23.033466
+CompassCalMinZ=-116.309822
+CompassCalMaxX=-11.229999
+CompassCalMaxY=126.595100
+CompassCalMaxZ=-15.357309
 
 # #####################################################################
 # 
 
 # Compass adjustment settings
 # Compass declination is in radians and is subtracted from calculated heading
-compassAdjDeclination=0.252944
+compassAdjDeclination=-0.255000
 
 # #####################################################################
 # 
@@ -120,21 +120,21 @@ compassCalCorr33=1.000000
 
 # Accel calibration
 AccelCalValid=true
-AccelCalMinX=-1.339174
-AccelCalMinY=-0.728204
-AccelCalMinZ=-1.226545
-AccelCalMaxX=0.612714
-AccelCalMaxY=0.634593
-AccelCalMaxZ=1.433109
+AccelCalMinX=-0.552133
+AccelCalMinY=-0.634228
+AccelCalMinZ=-1.498081
+AccelCalMaxX=0.494389
+AccelCalMaxY=0.683086
+AccelCalMaxZ=1.433981
 
 # #####################################################################
 # 
 
 # Saved gyro bias data
 GyroBiasValid=true
-GyroBiasX=inf
-GyroBiasY=-inf
-GyroBiasZ=-inf
+GyroBiasX=0.059011
+GyroBiasY=-0.150587
+GyroBiasZ=-0.036153
 
 # #####################################################################
 # 
