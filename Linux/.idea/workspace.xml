@@ -24,12 +24,12 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="RTIMULib" targetName="RTIMULibCal" />
-      <config projectName="RTIMULib" targetName="RTIMULib" />
       <config projectName="RTIMULib" targetName="RTIMULibDrive" />
-      <config projectName="RTIMULib" targetName="gpio_output" />
       <config projectName="RTIMULib" targetName="RTIMULibDrive11" />
+      <config projectName="RTIMULib" targetName="RTIMULibCal" />
       <config projectName="RTIMULib" targetName="RTIMULibDrive10" />
+      <config projectName="RTIMULib" targetName="gpio_output" />
+      <config projectName="RTIMULib" targetName="RTIMULib" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -49,68 +49,89 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.77537435">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RTIMULibDrive.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-162">
-                  <caret line="174" column="49" selection-start-line="174" selection-start-column="49" selection-end-line="174" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#1253#1278#0" expanded="true" />
-                    <element signature="e#1310#1329#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RTIMU.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RTIMULSM9DS1.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="411" column="19" selection-start-line="411" selection-start-column="19" selection-end-line="411" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#0#76#0" />
-                    <element signature="e#1549#1720#0" />
-                    <element signature="e#6054#8021#0" />
-                    <element signature="e#8023#8522#0" />
-                    <element signature="e#8524#9819#0" />
-                    <element signature="e#9821#10061#0" />
-                    <element signature="e#10064#10537#0" />
-                    <element signature="e#10539#11363#0" />
-                    <element signature="e#11365#11511#0" />
-                    <element signature="e#11513#11588#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="RTIMULibDefs.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMULibDefs.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="774">
-                  <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RTIMULibDrive.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-100">
+              <caret line="174" selection-start-line="174" selection-end-line="174" />
+              <folding>
+                <element signature="e#1253#1278#0" expanded="true" />
+                <element signature="e#1324#1343#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RTMath.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RTIMULib/RTMath.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+              <folding>
+                <element signature="e#1474#1544#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RTIMU.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RTIMULSM9DS1.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="175" column="33" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#76#0" />
+                <element signature="e#1549#1720#0" />
+                <element signature="e#6054#8021#0" />
+                <element signature="e#8023#8522#0" />
+                <element signature="e#8524#9819#0" />
+                <element signature="e#9821#10061#0" />
+                <element signature="e#10064#10537#0" />
+                <element signature="e#10539#11363#0" />
+                <element signature="e#11365#11511#0" />
+                <element signature="e#11513#11588#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RTIMUHal.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="877">
+              <caret line="270" selection-start-line="270" selection-end-line="270" />
+              <folding>
+                <element signature="e#0#76#0" />
+                <element signature="e#3950#4011#0" />
+                <element signature="e#4013#4142#0" />
+                <element signature="e#4144#4243#0" />
+                <element signature="e#9386#9847#0" />
+                <element signature="e#9849#9926#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -133,8 +154,8 @@
         <option value="$PROJECT_DIR$/gpio/gpio_output.cpp" />
         <option value="$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp" />
         <option value="$PROJECT_DIR$/gpio/pathmacros.h" />
-        <option value="$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp" />
         <option value="$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.h" />
+        <option value="$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp" />
         <option value="$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp" />
       </list>
     </option>
@@ -150,9 +171,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="65" />
+    <option name="x" value="1312" />
     <option name="y" value="24" />
-    <option name="width" value="1446" />
+    <option name="width" value="1248" />
     <option name="height" value="1576" />
   </component>
   <component name="ProjectView">
@@ -160,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,22 +193,17 @@
               <item name="Linux" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Linux" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RTIMULib" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Linux" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Linux" type="462c0819:PsiDirectoryNode" />
-              <item name="RTIMULibDrive" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -211,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RTIMULibDrive">
+  <component name="RunManager" selected="Application.Build All">
     <configuration name="RTIMULibDrive" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="192.168.101.29:2443" symbolFile="$PROJECT_DIR$/cmake-build-debug/RTIMULibDrive/RTIMULibDrive" sysroot="$USER_HOME$" />
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="192.168.0.2:2334" symbolFile="" sysroot="" />
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RTIMULib" RUN_TARGET_NAME="RTIMULibDrive" EXPLICIT_BUILD_TARGET_NAME="all" />
@@ -275,6 +290,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
+      <item itemvalue="GDB Remote Debug.RTIMULibDrive" />
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.gpio_output" />
       <item itemvalue="Application.RTIMULibCal" />
@@ -282,7 +298,6 @@
       <item itemvalue="Application.RTIMULibDrive10" />
       <item itemvalue="Application.RTIMULibDrive11" />
       <item itemvalue="Application.RTIMULib" />
-      <item itemvalue="GDB Remote Debug.RTIMULibDrive" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -317,26 +332,28 @@
       <workItem from="1532021014979" duration="3683000" />
       <workItem from="1532027742317" duration="643000" />
       <workItem from="1532034850400" duration="756000" />
-      <workItem from="1533658064187" duration="9083000" />
+      <workItem from="1533658064187" duration="10503000" />
+      <workItem from="1534006267321" duration="10448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62209000" />
+    <option name="totallyTimeSpent" value="74077000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1446" height="1576" extended-state="4" />
+    <frame x="1312" y="24" width="1248" height="1576" extended-state="4" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.26468557" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.26468557" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.33448514" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32964754" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.28265378" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20663404" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28265378" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2404326" />
       <window_info anchor="bottom" id="TeamCity" order="8" />
       <window_info anchor="right" id="LuaJ" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32964754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28334486" />
@@ -345,11 +362,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32946378" />
-      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32964754" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTIMULibCal/RTIMULibCal.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -585,21 +594,6 @@
     <entry file="file://$PROJECT_DIR$/gpio/getkey.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#76#0" />
-            <element signature="e#3950#4011#0" />
-            <element signature="e#4013#4142#0" />
-            <element signature="e#4144#4243#0" />
-            <element signature="e#9386#9847#0" />
-            <element signature="e#9849#9926#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/RTFusion.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -621,9 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#323#418#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,31 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTMath.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMULibDefs.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMU.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="198">
           <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="411" column="19" selection-start-line="411" selection-start-column="19" selection-end-line="411" selection-end-column="19" />
+        <state relative-caret-position="409">
+          <caret line="175" column="33" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
           <folding>
             <element signature="e#0#76#0" />
             <element signature="e#1549#1720#0" />
@@ -691,13 +668,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMULibDefs.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTIMUHal.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="877">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
+          <folding>
+            <element signature="e#0#76#0" />
+            <element signature="e#3950#4011#0" />
+            <element signature="e#4013#4142#0" />
+            <element signature="e#4144#4243#0" />
+            <element signature="e#9386#9847#0" />
+            <element signature="e#9849#9926#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RTIMULib/RTMath.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+          <folding>
+            <element signature="e#1474#1544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="174" column="49" selection-start-line="174" selection-start-column="49" selection-end-line="174" selection-end-column="49" />
+        <state relative-caret-position="-100">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
           <folding>
             <element signature="e#1253#1278#0" expanded="true" />
-            <element signature="e#1310#1329#0" expanded="true" />
+            <element signature="e#1324#1343#0" expanded="true" />
           </folding>
         </state>
       </provider>

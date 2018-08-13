@@ -30,7 +30,7 @@ using namespace std;
 #include <iostream>
 #include <fstream>
 
-int main()
+int main_()
 {
     int sampleCount = 0;
     int sampleRate = 0;
@@ -73,8 +73,6 @@ int main()
 
     while (1) {
         //  poll at the rate recommended by the IMU
-
-        usleep(imu->IMUGetPollInterval() * 1000);
 
         while (imu->IMURead()) {
             RTIMU_DATA imuData = imu->getIMUData();
@@ -172,14 +170,13 @@ void writeImu(void)
 
   ofstream myfile;
 
-  myfile.open(currentDateTime() + "_LSM9DS1.txt");
+  myfile.open("/mnt/data/IMU/LSM9DS1_1/" + currentDateTime() + "_LSM9DS1.txt");
+
+  myfile << "time[us], x_accel, y_accel, z_accel, x_gyro, y_gyro, z_gyro, x_compass, y_compass, z_compass, roll, pitch, yaw\n";
 
   char fileBuffer[200] = {0};
 
   while (1) {
-    //  poll at the rate recommended by the IMU
-
-    usleep(imu->IMUGetPollInterval() * 1000);
 
     while (imu->IMURead()) {
 
@@ -209,11 +206,11 @@ void writeImu(void)
 
       if ((now - rateTimer) > 1000000) {
 
-        fflush(stdout);
-
         sampleCount = 0;
 
         rateTimer = now;
+
+        myfile.flush();
 
       }
 
@@ -223,7 +220,7 @@ void writeImu(void)
 
 }
 
-int main_()
+int main()
 {
 
   writeImu();
