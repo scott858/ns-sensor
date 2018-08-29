@@ -110,7 +110,7 @@ const std::string currentDateTime()
 
   tstruct = *localtime(&now);
 
-  strftime(buf, sizeof(buf), "%Y_%m_%d_%S", &tstruct);
+  strftime(buf, sizeof(buf), "%Y_%m_%d_%H_%M_%S", &tstruct);
 
   return buf;
 
@@ -170,7 +170,7 @@ void writeImu(void)
 
   ofstream myfile;
 
-  myfile.open("/mnt/data/IMU/LSM9DS1_1/" + currentDateTime() + "_LSM9DS1.txt");
+  myfile.open("/mnt/data/imu/LSM9DS1_1/" + currentDateTime() + "_LSM9DS1.txt");
 
   myfile << "time[us], x_accel, y_accel, z_accel, x_gyro, y_gyro, z_gyro, x_compass, y_compass, z_compass, roll, pitch, yaw\n";
 
