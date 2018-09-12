@@ -32,7 +32,7 @@
       <config projectName="RTIMULib" targetName="RTIMULib" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/opt/sysroots/imx6/mnt/data/repos/rtimulib/Linux/toolchains/linaro-eabihf.cmake" />
     </configurations>
@@ -74,9 +74,10 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,12 +96,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="78" />
+          <entry key="cpp" value="4071" />
+          <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="78" />
+          <entry key="CMakeLists.txt" value="49" />
+          <entry key="ObjectiveC" value="4071" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -111,11 +114,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+            <state relative-caret-position="-1080">
+              <caret line="164" column="33" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="33" />
               <folding>
                 <element signature="e#1253#1278#0" expanded="true" />
                 <element signature="e#1324#1343#0" expanded="true" />
+                <element signature="e#1364#3257#0" />
               </folding>
             </state>
           </provider>
@@ -123,7 +127,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RTIMULibDrive/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -151,6 +159,7 @@
         <option value="$PROJECT_DIR$/gpio/pathmacros.h" />
         <option value="$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.h" />
         <option value="$PROJECT_DIR$/../RTIMULib/IMUDrivers/RTIMULSM9DS1.cpp" />
+        <option value="$PROJECT_DIR$/RTIMULibDrive/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp" />
       </list>
     </option>
@@ -168,11 +177,32 @@
     <option name="width" value="1248" />
     <option name="height" value="1576" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>Data flow analysisC/C++</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>EndlessLoop</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,13 +225,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../imu_lsm9ds1" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -371,18 +400,19 @@
       <workItem from="1534006267321" duration="10448000" />
       <workItem from="1535551257491" duration="23000" />
       <workItem from="1535551465473" duration="568000" />
-      <workItem from="1535552809719" duration="1167000" />
+      <workItem from="1535552809719" duration="3278000" />
+      <workItem from="1536760007268" duration="2551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75835000" />
+    <option name="totallyTimeSpent" value="80497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1248" height="1576" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24459234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24875207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -620,15 +650,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RTIMULibDrive/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RTIMULibDrive/RTIMULibDrive.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+        <state relative-caret-position="-1080">
+          <caret line="164" column="33" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="33" />
           <folding>
             <element signature="e#1253#1278#0" expanded="true" />
             <element signature="e#1324#1343#0" expanded="true" />
+            <element signature="e#1364#3257#0" />
           </folding>
         </state>
       </provider>

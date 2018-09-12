@@ -30,7 +30,12 @@
 SET(DRIVE_SRCS
     RTIMULibDrive.cpp)
 
+link_directories(/opt/sysroots/imx6/usr/local/hdf5/lib)
+link_directories(/opt/sysroots/imx6/usr/local/lib)
+
+include_directories(/opt/sysroots/imx6/usr/local/hdf5/include)
+
 ADD_EXECUTABLE(RTIMULibDrive ${DRIVE_SRCS})
-TARGET_LINK_LIBRARIES(RTIMULibDrive RTIMULib)
+TARGET_LINK_LIBRARIES(RTIMULibDrive RTIMULib -lhdf5 -lhdf5_cpp)
 
 INSTALL(TARGETS RTIMULibDrive DESTINATION bin)
